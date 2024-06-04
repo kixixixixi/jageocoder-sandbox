@@ -1,0 +1,34 @@
+{
+  "name": "jageocoder",
+  "dockerComposeFile": [
+    "../compose.yml",
+    "compose.yml"
+  ],
+  "service": "api",
+  "workspaceFolder": "/app",
+  "postCreateCommand": "./.devcontainer/postCreateCommand.sh",
+  "containerEnv": {
+    "TZ": "Asia/Tokyo"
+  },
+  "customizations": {
+      "vscode": {
+        "settings": {
+          "editor.renderWhitespace": "all",
+          "[json][jsonc]": {
+            "editor.defaultFormatter": "esbenp.prettier-vscode",
+            "editor.formatOnSave": true,
+            "editor.codeActionsOnSave": {
+              "source.fixAll": true
+            }
+          }
+        },
+        "extensions": [
+          "esbenp.prettier-vscode",
+          "ms-python.python",
+          "njpwerner.autodocstring",
+          "KevinRose.vsc-python-indent",
+          "prisma.prisma"
+        ]
+      }
+    }
+}
